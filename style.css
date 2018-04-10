@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 100%;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background: maroon;
+  width: 100%;
+  height: auto;
+  font-variant: small-caps;
+  }
+
+footer {
+  background: maroon;
+  width: 100%;
+  height: 2rem;
+  color: white;
+  font-size: .8rem;
+  flex-shrink: 0;
+}
+
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bottomnav {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-top: .5rem;
+  padding-right: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: .5rem;
+}
+
+ul {
+  line-height: 1.5rem;
+}
+
+ul div a:hover {
+  border-radius: .3rem;
+}
+
+a:visited {
+  color: darkgrey;
+}
+
+a:hover {
+  background-color: black;
+}
+
+a:active {
+  background-color: darkgrey;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+h1 {
+  font-size: 4rem;
+  color: maroon;
+  z-index: 1;
+  position:absolute;
+  bottom: 50%;
+  right: 10%;
+}
+
+main {
+  flex: 1 0  auto;
+}
+
+#copyright {
+  float:left;
+  margin-top: .5rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 50em) {
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 1rem;
+  }
+}
