@@ -30,31 +30,38 @@ footer {
   flex-shrink: 0;
 }
 
-.topnav {
+#topnav {
   display: flex;
-  flex-direction: row;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  line-height: 1.5rem;
+  overflow: hidden;
+
 }
 
-.bottomnav {
+#bottomnav {
   display: flex;
   flex-direction: row;
-  float: right;
-  padding-top: .5rem;
+  justify-content: flex-end;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
   padding-right: 1rem;
+  overflow: hidden;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: .5rem;
+  padding: .45rem;
 }
 
-ul {
+/* ul {
   line-height: 1.5rem;
-}
+} */
 
-ul div a:hover {
+div a:hover {
   border-radius: .3rem;
 }
 
@@ -70,9 +77,15 @@ a:active {
   background-color: darkgrey;
 }
 
-img {
-  width: 100%;
+.headpic {
+  /* width: 100%;
   object-fit: contain;
+  position: relative; */
+  width: auto;
+  height: 100%; /*vh: viewport height*/
+  background-image: url(img/pencil.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -82,8 +95,12 @@ h1 {
   z-index: 1;
   position:absolute;
   bottom: 50%;
-  right: 10%;
+  left: 50%;
 }
+
+/* #willkommen {
+
+} */
 
 main {
   flex: 1 0 auto;
@@ -95,12 +112,18 @@ main {
   margin-left: 1rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 48em) {
+  header {
+    height: 2rem;
+  }
 
-  ul {
+  #topnav {
     display: flex;
+    height: 2rem;
     flex-direction: row;
-    float: right;
+    justify-content: flex-end;
+    align-items: center;
     padding-right: 1rem;
+    margin-top: .05rem;
   }
 }
