@@ -11,7 +11,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh; /*vh: viewport height*/
+  background-color: seashell;
 }
 
 header {
@@ -45,7 +46,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-top: .25rem;
+  align-items: center;
+  padding-top: .5rem;
   padding-bottom: .25rem;
   padding-right: 1rem;
   overflow: hidden;
@@ -77,40 +79,59 @@ a:active {
   background-color: darkgrey;
 }
 
-.headpic {
-  /* width: 100%;
-  object-fit: contain;
-  position: relative; */
-  width: auto;
-  height: 100%; /*vh: viewport height*/
-  background-image: url(img/pencil.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+#pencil {
+  width: 100%;
+  height: auto;
   position: relative;
+  object-fit: scale-down;
 }
-
-h1 {
-  font-size: 4rem;
-  color: maroon;
-  z-index: 1;
-  position:absolute;
-  bottom: 50%;
-  left: 50%;
-}
-
-/* #willkommen {
-
-} */
 
 main {
   flex: 1 0 auto;
 }
 
-#copyright {
-  float:left;
-  margin-top: .5rem;
-  margin-left: 1rem;
+h1 {
+  font-size: 2rem;
 }
+
+article a {
+  color: black;
+  text-decoration: underline;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+
+#lektorat {
+    flex-wrap: wrap-reverse;
+  }
+
+article {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid black;
+  }
+
+.mainimg {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  padding: .2rem;
+  border: 1px solid black;
+}
+
+#copyright {
+    float:left;
+    margin-top: .5rem;
+    margin-left: 1rem;
+  }
+
+
+
 
 @media (min-width: 48em) {
   header {
@@ -126,4 +147,25 @@ main {
     padding-right: 1rem;
     margin-top: .05rem;
   }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  article {
+    width: 66.666667%;
+    padding: .5rem;
+    border: 1px solid black;
+  }
+
+  .mainimg {
+    display: flex;
+    width: 33.33333%;
+    height: 50%;
+    object-fit: scale-down;
+    padding: .2rem;
+    border: 1px solid black;
+  }
+
 }
